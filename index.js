@@ -1,1 +1,1 @@
-alert("weight")
+alert("weight check")

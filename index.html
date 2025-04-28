@@ -4,16 +4,9 @@
     <title>Baggage Weight Checker</title>
     <script src="index.js"></script>
     <script>
-        let checkBaggageWeight = () => {
+        let checkWeight = () => {
             
-            const weight = parseFloat(document.getElementById('baggageWeight').value);
-            
-            
-            if (isNaN(weight)) {
-                alert("Please enter a valid number for baggage weight.")
-                return;
-            }
-
+            const weight = parseInt(document.getElementById('baggageWeight').value);
             
             if (weight > 15) {
                 alert("Baggage exceeds the allowance of 15kg!")
@@ -27,6 +20,6 @@
     <h1>Baggage Weight Checker</h1>
     <label for="baggageWeight">Enter baggage weight (kg):</label>
     <input type="number" id="baggageWeight">
-    <button onclick="checkBaggageWeight()">Check Weight</button>
+    <button onclick="checkWeight()">Check Weight</button>
 </body>
 </html>
