@@ -1,13 +1,22 @@
 <html>
     <head>
-        <title>Test Page</title>
+        <title>Exercise</title>
         <script src="index.js"></script>
-        <script>alert("This is an inline script!")
-                let c=()=>{
-                    let i=document.getElementById('in').value
-                    alert(parseInt(i)+1);
+        <script>
+              let BaggageWeight = () => {
+              const weight = parseFloat(document.getElementById('baggageWeight').value);
                 }
-                let doIt=()=>alert("Not Implemented!");
+                if (weight > 15) {
+                    alert("Baggage exceeds the allowance of 15kg!");
+                } else {
+                alert("Baggage is within the allowance.");
+            }
         </script>
     </head>
     <body>
+        <h1>Baggage Weight Checker</h1>
+        <label for="baggageWeight">Enter baggage weight (kg):</label>
+        <input type="number" id="baggageWeight" step="0.1" required>
+        <button onclick="checkBaggageWeight()">Check Weight</button>
+    </body>
+    </html>
