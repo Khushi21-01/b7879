@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>Baggage Weight Checker</title>
+    <title>1:Baggage Weight Checker</title>
     <script src="index.js"></script>
     <script>
         let checkWeight = () => {
@@ -21,5 +21,31 @@
     <label for="baggageWeight">Enter baggage weight (kg):</label>
     <input type="number" id="baggageWeight">
     <button onclick="checkWeight()">Check Weight</button>
+</body>
+
+<title>Sum of Multiples</title>
+<script>
+    // Using let to define the function as an arrow function
+    let doIt = () => {
+        let sum = 0;
+
+        // Loop through numbers below 1000
+        for (let i = 0; i < 1000; i++) {
+            // Check if the number is a multiple of 3 or 5
+            if (i % 3 === 0 || i % 5 === 0) {
+                sum += i; // Add to sum
+            }
+        }
+
+        // Alert the user with the result
+        alert("The sum of all multiples of 3 or 5 below 1000 is: " + sum);
+    };
+</script>
+</head>
+<body>
+<h1>Sum of Multiples of 3 or 5</h1>
+<p>
+    <button onclick="doIt()">Press me!</button>
+</p>
 </body>
 </html>
