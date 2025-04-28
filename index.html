@@ -1,9 +1,8 @@
 <html>
     <head>
         <title>Exercise</title>
-        //<script src="index.js"></script>
         <script>
-              let BaggageWeight = () => {
+              let baggageWeight = () => {
               const weight = parseFloat(document.getElementById('baggageWeight').value);
                 }
                 if (weight > 15) {
@@ -16,7 +15,7 @@
     <body>
         <h1>Baggage Weight Checker</h1>
         <label for="baggageWeight">Enter baggage weight (kg):</label>
-        <input type="number" id="baggageWeight" step="0.1" required>
-        <button onclick="checkBaggageWeight()">Check Weight</button>
+        <input type="number" id="baggageWeight" >
+        <button onclick="BaggageWeight()">Check Weight</button>
     </body>
     </html>
