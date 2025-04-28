@@ -1,21 +1,34 @@
-<html>
-    <head>
-        <title>Exercise</title>
-        <script>
-              let baggageWeight = () => {
-              const weight = parseFloat(document.getElementById('baggageWeight').value);
-                }
-                if (weight > 15) {
-                    alert("Baggage exceeds the allowance of 15kg!");
-                } else {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggage Weight Checker</title>
+    <script>
+        // Using let to define the function as an arrow function
+        let checkBaggageWeight = () => {
+            // Get the value from the input field
+            const weight = parseFloat(document.getElementById('baggageWeight').value);
+            
+            // Check if the input is a number
+            if (isNaN(weight)) {
+                alert("Please enter a valid number for baggage weight.");
+                return;
+            }
+
+            // Check if the baggage weight exceeds the allowance
+            if (weight > 15) {
+                alert("Baggage exceeds the allowance of 15kg!");
+            } else {
                 alert("Baggage is within the allowance.");
             }
-        </script>
-    </head>
-    <body>
-        <h1>Baggage Weight Checker</h1>
-        <label for="baggageWeight">Enter baggage weight (kg):</label>
-        <input type="number" id="baggageWeight" >
-        <button onclick="BaggageWeight()">Check Weight</button>
-    </body>
-    </html>
+        };
+    </script>
+</head>
+<body>
+    <h1>Baggage Weight Checker</h1>
+    <label for="baggageWeight">Enter baggage weight (kg):</label>
+    <input type="number" id="baggageWeight" step="0.1" required>
+    <button onclick="checkBaggageWeight()">Check Weight</button>
+</body>
+</html>
